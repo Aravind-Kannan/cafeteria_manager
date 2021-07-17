@@ -10,7 +10,8 @@
 
 .UserHeader {
   padding: 10px;
-  background-color: lightgray;
+  background-color: lightgreen;
+  border-radius: 10px;
   font-size: 14px;
   margin-bottom: 10px;
   display: flex;

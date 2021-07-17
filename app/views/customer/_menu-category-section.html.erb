@@ -1,0 +1,23 @@
+<div class="Item-List">
+  <p class="Category-Title">
+  <%= category.name %>
+  </p>
+</div>
+<ul class="Category-List">
+<% items.each do |item| %>
+    <li class="Category-Item">
+      <div>
+        <div class="Item-List">
+        <p><%= item.name %></p>
+        <p>₹<%= item.price %></p>
+        <%= form_with(url: "/cart_items?id=#{item.id}&name=#{item.name}&price=#{item.price}", method: "post") do %>
+          <%= submit_tag "Add", name: "submit", class: "", hidden: live_cart_items.find_by(menu_item_id: item.id) != nil %>
+        <% end %>
+        </div>
+        <p class="Item-Desc">
+          <%= item.description %>
+        </p>
+      </div>
+    </li>
+<% end %>
+</ul>

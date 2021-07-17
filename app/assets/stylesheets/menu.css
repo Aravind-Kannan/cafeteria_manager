@@ -126,8 +126,19 @@
 .Total {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
   padding: 10px;
+  margin-top: 10px;
   border-radius: 10px;
   background-color: rosybrown;
+}
+
+.Order-Btn {
+  border-radius: 10px;
+  border: 1px solid;
+  color: white;
+  font-size: 20px;
+  background-color: brown;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
 }
