@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use postgres as the database for Active Record
 gem "pg", "~> 1.2"
+
+gem "bcrypt", "~> 3.1"
