@@ -18,14 +18,17 @@ class CartItemsController < ApplicationController
   end
 
   def update
-    id = params[:id]
-    cart_item = CartItem.find(id)
-    if params[:action] == "up"
+    c_id = params[:id]
+    cart_item = CartItem.find(c_id)
+    if params[:count] == "+"
       cart_item.qty = cart_item.qty + 1
-    elsif params[:action] == "down"
+    elsif params[:count] == "-"
       cart_item.qty = cart_item.qty - 1
     end
     cart_item.save
+    if cart_item.qty <= 0
+      cart_item.destroy
+    end
     redirect_to new_customer_path
   end
 end

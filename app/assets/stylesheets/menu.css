@@ -3,7 +3,7 @@
 }
 .Menu-Title {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 .Menu-Subtitle {
   font-size: 16px;
@@ -41,6 +41,7 @@
   padding: 6px 12px;
 }
 .Menu-Card {
+  border-radius: 10px;
   padding: 5px;
   background-color: lightgoldenrodyellow;
 }
@@ -54,12 +55,14 @@
 }
 
 .Category-List {
+  border-radius: 10px;
   padding: 10px;
   background-color: chocolate;
   margin: 10px;
 }
 
 .Category-Item {
+  border-radius: 10px;
   background-color: darksalmon;
   margin-top: 10px;
 }
@@ -79,4 +82,52 @@
 .Item-Desc {
   padding: 6px 12px;
   font-size: 12px;
+}
+/*Cart Styling*/
+.Cart-Title {
+  font-size: 32px;
+  margin: 10px;
+}
+.Cart-List {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: lightsteelblue;
+}
+
+.Cart-Item--Container {
+  border-radius: 10px;
+  background-color: lightcyan;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+}
+
+.Cart-Item--Elements {
+  flex: 4;
+}
+
+.Qty {
+  display: flex;
+}
+
+.Qty--Btn {
+  border: 1px solid #bfb8cc;
+  margin: 2px;
+}
+
+.Up {
+  background-color: green;
+}
+
+.Down {
+  background-color: red;
+}
+
+.Total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rosybrown;
 }
