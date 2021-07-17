@@ -4,9 +4,9 @@ class HomeController < ApplicationController
   def index
     if current_user
       if current_user.role == "owner"
-        redirect_to inventory_index_path
+        redirect_to new_owner_path
       elsif current_user.role == "customer"
-        redirect_to menu_index_path
+        redirect_to menu_index_path #replace
       end
     else
       render "index"

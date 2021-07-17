@@ -15,10 +15,17 @@
   align-items: center;
   margin-bottom: 24px;
 }
+.AddMenuItems {
+  display: inline-table;
+  height: 32px;
+  align-items: center;
+  margin-bottom: 24px;
+}
 .AddMenu-Text {
   border-radius: 4px;
   border: 1px solid #bfb8cc;
   padding: 6px 12px;
+  margin-top: 3px;
   margin-left: 4px;
 }
 .AddMenu-Btn {

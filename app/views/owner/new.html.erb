@@ -7,7 +7,7 @@
   <% end %>
 
   <p class="Menu-Subtitle">Add a Menu Item: </p>
-  <%= form_with(url: "/menu_items", method: "post", class: "AddMenu") do %>
+  <%= form_with(url: "/menu_items", method: "post", class: "AddMenuItems") do %>
     <%= text_field_tag "name", nil, class: "AddMenu-Text", placeholder: "Menu Item", autofocus: true %>
     <%= text_field_tag "description", nil, class: "AddMenu-Text", placeholder: "Description", autofocus: true %>
     <%= text_field_tag "price", nil, class: "AddMenu-Text", placeholder: "Price", autofocus: true %>
