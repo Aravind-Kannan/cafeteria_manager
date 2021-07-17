@@ -1,0 +1,75 @@
+.Menu-Main {
+  margin-top: 20px;
+}
+.Menu-Title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.Menu-Subtitle {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.AddMenu {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.AddMenu-Text {
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+  padding: 6px 12px;
+  margin-left: 4px;
+}
+.AddMenu-Btn {
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+  padding: 6px 12px;
+}
+.AddMenu-Drop {
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 1px solid #bfb8cc;
+  padding: 6px 12px;
+}
+.Menu-Card {
+  padding: 5px;
+  background-color: lightgoldenrodyellow;
+}
+
+.Category-Header {
+  margin: 5px;
+}
+
+.Category-Title {
+  font-size: 20px;
+}
+
+.Category-List {
+  padding: 10px;
+  background-color: chocolate;
+  margin: 10px;
+}
+
+.Category-Item {
+  background-color: darksalmon;
+  margin-top: 10px;
+}
+
+.Item-Card {
+  display: flex;
+}
+
+.Item-List {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 6px 12px;
+  font-size: 16px;
+}
+
+.Item-Desc {
+  padding: 6px 12px;
+  font-size: 12px;
+}

@@ -40,3 +40,5 @@ create database cafeteria_mgmt_db;
 - `ActiveRecord::Base.connection.tables` : Display all tables in database - run this command in rails console
 
 - The database must exist in local machine to be accessed via `database.yml` file
+
+- Stylesheet ordering: apllication.css using 'require' commands

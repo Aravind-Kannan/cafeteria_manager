@@ -1,0 +1,25 @@
+<main class="Menu-Main">
+  <h1 class="Menu-Title">Menu Card Settings</h1>
+  <p class="Menu-Subtitle">Add a Menu Category: </p>
+  <%= form_with(url: "/menu_categories", method: "post", class: "AddMenu") do %>
+    <%= text_field_tag "name", nil, class: "AddMenu-Text", placeholder: "Add New category", autofocus: true %>
+    <%= submit_tag "Add", name: "submit", class: "AddMenu-Btn" %>
+  <% end %>
+
+  <p class="Menu-Subtitle">Add a Menu Item: </p>
+  <%= form_with(url: "/menu_items", method: "post", class: "AddMenu") do %>
+    <%= text_field_tag "name", nil, class: "AddMenu-Text", placeholder: "Menu Item", autofocus: true %>
+    <%= text_field_tag "description", nil, class: "AddMenu-Text", placeholder: "Description", autofocus: true %>
+    <%= text_field_tag "price", nil, class: "AddMenu-Text", placeholder: "Price", autofocus: true %>
+    <%= select_tag("menu_category", options_for_select(MenuCategory.allCategories), class: "AddMenu-Drop") %>
+    <%= submit_tag "Add", name: "submit", class: "AddMenu-Btn" %>
+  <% end %>
+  <div class="Menu-Card">
+    <% MenuCategory.all.each do |menu_category| %>
+    <%= render partial: "menu-category-section", locals: {
+                 category: menu_category,
+                 items: menu_category.menu_items,
+               } %>
+    <% end %>
+  </div>
+</main>

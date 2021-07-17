@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   delete "/signout" => "sessions#destroy", as: :destroy_session
 
   post "users/login", to: "users#login"
+  get "/owner" => "owner#new", as: :new_owner
   resources :users
+  resources :menu_categories
+  resources :menu_items
 end

@@ -1,0 +1,29 @@
+<div class="Item-List">
+  <p class="Category-Title">
+  <%= category.name %>
+  </p>
+  <%= form_with(url: "/menu_categories/#{category.id}", method: "patch", class: "") do %>
+    <%= submit_tag category.active ? "Active" : "Inactive", name: "active", class: "AddMenu-Btn" %>
+  <% end %>
+  <%= form_with(url: "/menu_categories/#{category.id}", method: "delete") do %>
+    <%= image_submit_tag "TrashCan.svg" %>
+  <% end %>
+</div>
+<ul class="Category-List">
+<% items.each do |item| %>
+  <li class="Category-Item">
+    <div>
+      <div class="Item-List">
+      <p><%= item.name %></p>
+      <p>₹<%= item.price %></p>
+      <%= form_with(url: "/menu_items/#{item.id}", method: "delete") do %>
+        <%= image_submit_tag "TrashCan.svg" %>
+      <% end %>
+      </div>
+      <p class="Item-Desc">
+        <%= item.description %>
+      </p>
+    </div>
+  </li>
+<% end %>
+</ul>
