@@ -6,7 +6,7 @@ class HomeController < ApplicationController
       if current_user.role == "owner"
         redirect_to new_owner_path
       elsif current_user.role == "customer"
-        redirect_to menu_index_path #replace
+        redirect_to new_customer_path
       end
     else
       render "index"

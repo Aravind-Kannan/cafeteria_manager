@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   post "users/login", to: "users#login"
   get "/owner" => "owner#new", as: :new_owner
+  get "/customer" => "customer#new", as: :new_customer
   resources :users
   resources :menu_categories
   resources :menu_items
-  resources :customer
 end
