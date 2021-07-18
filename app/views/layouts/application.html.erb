@@ -23,6 +23,10 @@
         <% if @current_user.role == "owner" %>
           <%= link_to "Menu Card Settings", new_owner_path, method: "get" %>
           <%= link_to "Pending Orders", new_pending_orders_path, method: "get" %>
+          <%= link_to "User Management", users_path, method: "get" %>
+        <% elsif @current_user.role == "clerk" %>
+          <%= link_to "Place Order/View Cart", new_customer_path, method: "get" %>
+          <%= link_to "Pending Orders", new_pending_orders_path, method: "get" %>
         <% elsif @current_user.role == "customer" %>
           <%= link_to "Place Order/View Cart", new_customer_path, method: "get" %>
           <%= link_to "Order History", new_order_history_path, method: "get" %>

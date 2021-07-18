@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<ul class="Category-List">
+<% User.all.order(created_at: :desc).each do |user| %>
+    <li class="Category-Item">
+      <div>
+        <div class="Item-List">
+        <p><%= user.name %></p>
+        <p><%= user.role %></p>
+        <%= form_with(url: "/users/#{user.id}", method: "patch") do %>
+          <%= select_tag("selected_role", options_for_select(["customer", "clerk", "owner"]), class: "AddMenu-Drop") %>
+          <%= submit_tag "Change", name: "submit", class: "" %>
+        <% end %>
+        </div>
+      </div>
+    </li>
+<% end %>

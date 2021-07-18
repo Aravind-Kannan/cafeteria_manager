@@ -34,7 +34,7 @@
 
 .Links {
   padding: 10px;
-  background-color: rgb(67, 235, 67);
+  background-color: black;
   border-radius: 10px;
   font-size: 14px;
   margin-bottom: 10px;
@@ -44,7 +44,7 @@
 }
 
 a {
-  background-color: lightgreen;
+  background-color: yellow;
   border-radius: 5px;
   padding: 5px;
   text-decoration: none;

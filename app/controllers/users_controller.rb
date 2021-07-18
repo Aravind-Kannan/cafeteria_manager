@@ -33,5 +33,16 @@ class UsersController < ApplicationController
   end
 
   def update
+    if current_user.role == "owner"
+      user = User.find(params[:id])
+      user.update(role: params[:selected_role])
+      user.save
+      redirect_to users_path
+    else
+      session[:current_user_id] = nil
+      @current_user = nil
+      flash[:error] = "Unauthorized"
+      redirect_to "/"
+    end
   end
 end

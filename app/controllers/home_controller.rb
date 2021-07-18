@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
   def index
     if current_user
-      if current_user.role == "owner"
+      if current_user.role == "owner" or current_user.role == "clerk"
         redirect_to new_pending_orders_path
       elsif current_user.role == "customer"
         redirect_to new_customer_path

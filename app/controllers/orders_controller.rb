@@ -1,7 +1,11 @@
 class OrdersController < ApplicationController
   # transfer current Cart contents into OrderItems and Order
   def create
-    order = @current_user.orders.create(date: DateTime.now)
+    if @current_user.role != "customer"
+      order = User.find_by(name: "Walk-in Customer").orders.create(date: DateTime.now)
+    else
+      order = @current_user.orders.create(date: DateTime.now)
+    end
     @current_user.cart_items.each do |item|
       order.order_items.create(
         menu_item_id: item[:menu_item_id],
@@ -11,7 +15,11 @@ class OrdersController < ApplicationController
       )
       item.destroy
     end
-    redirect_to new_order_history_path
+    if @current_user.role != "customer"
+      redirect_to new_pending_orders_path
+    else
+      redirect_to new_order_history_path
+    end
   end
 
   def update
