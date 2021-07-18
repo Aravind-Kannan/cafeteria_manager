@@ -1,0 +1,15 @@
+<main class="Orders--Main">
+  <% if @current_user.orders.count != 0 %>
+    <h1 class="Orders--Title">Order History</h1>
+    <div class="Orders--List">
+      <% @current_user.orders.each do |order| %>
+      <%= render partial: "order-section", locals: {
+                   order: order,
+                   items: order.order_items,
+                 } %>
+      <% end %>
+    </div>
+  <% else %>
+    <h1 class="Orders--Title">Empty History!</h1>
+  <% end %>
+</main>

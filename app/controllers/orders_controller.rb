@@ -11,8 +11,7 @@ class OrdersController < ApplicationController
       )
       item.destroy
     end
-    # redirect_to order_history_path
-    render plain: "Success"
+    redirect_to new_order_history_path
   end
 
   def update

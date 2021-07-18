@@ -17,3 +17,14 @@
   border-radius: 10px;
   background-color: cornflowerblue;
 }
+.Orders--Card--Status {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.Pending {
+  background-color: red;
+}
+.Delivered {
+  background-color: green;
+}

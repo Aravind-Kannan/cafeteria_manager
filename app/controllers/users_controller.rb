@@ -20,4 +20,18 @@ class UsersController < ApplicationController
       redirect_to "/"
     end
   end
+
+  def index
+    if current_user.role == "owner"
+      render "users/index"
+    else
+      session[:current_user_id] = nil
+      @current_user = nil
+      flash[:error] = "Unauthorized"
+      redirect_to "/"
+    end
+  end
+
+  def update
+  end
 end
