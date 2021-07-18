@@ -9,7 +9,7 @@
                } %>
     <% end %>
   </div>
-  <div class="Cart" hidden="<%= @current_user.cart_items.count == 0 %>">
+  <div class="Cart" <%= @current_user.cart_items.count == 0 ? "hidden" : "" %>>
   <h1 class="Cart-Title">Cart</h1>
   <ul class="Cart-List">
     <% @current_user.cart_items.each do |item| %>
