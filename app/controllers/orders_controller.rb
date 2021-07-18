@@ -11,7 +11,19 @@ class OrdersController < ApplicationController
       )
       item.destroy
     end
-    # redirect_to new_customer_path
+    # redirect_to order_history_path
     render plain: "Success"
+  end
+
+  def update
+    if @current_user.role != "customer"
+      order = Order.find_by(id: params[:id])
+      order.delivered_at = DateTime.now
+      order.save
+      flash[:error] = "Delivered"
+    else
+      flash[:error] = "Unauthorised!"
+    end
+    redirect_to "/"
   end
 end

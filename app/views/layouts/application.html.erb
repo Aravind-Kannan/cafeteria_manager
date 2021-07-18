@@ -19,6 +19,21 @@
         Hello <%= @current_user.name %>!
         <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
       </p>
+      <p class="Links">
+        <% if @current_user.role == "owner" %>
+          <%= link_to "Menu Card Settings", new_owner_path, method: "get" %>
+          <%= link_to "Pending Orders", new_pending_orders_path, method: "get" %>
+        <% elsif @current_user.role == "customer" %>
+          <%= link_to "Place Order/View Cart", new_customer_path, method: "get" %>
+          <% #= link_to "Order History", new_order_history_path, method: "get" %>
+        <% end %>
+      </p>
+    <% end %>
+
+    <% if flash[:msg] %>
+      <p class="Flash-success">
+      <%= flash[:msg] %>
+      </p>
     <% end %>
 
     <% if flash[:error] %>

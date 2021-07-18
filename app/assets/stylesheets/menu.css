@@ -3,7 +3,8 @@
 }
 .Menu-Title {
   font-size: 32px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .Menu-Subtitle {
   font-size: 16px;

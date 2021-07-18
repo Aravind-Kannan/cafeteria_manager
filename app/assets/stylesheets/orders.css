@@ -1,0 +1,19 @@
+.Orders--Main {
+  margin-top: 15px;
+}
+.Orders--Title {
+  font-size: 32px;
+  margin: 10px;
+}
+.Orders--Card {
+  margin-top: 10px;
+  background-color: aqua;
+  padding: 7px;
+  border-radius: 10px;
+}
+.Orders--List {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+}

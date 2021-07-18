@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post "users/login", to: "users#login"
   get "/owner" => "owner#new", as: :new_owner
   get "/customer" => "customer#new", as: :new_customer
+  # get "/order_history" => "order_history#new", as: :new_order_history
+  get "/pending_orders" => "pending_orders#new", as: :new_pending_orders
   resources :users
   resources :menu_categories
   resources :menu_items

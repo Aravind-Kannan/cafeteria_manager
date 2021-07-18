@@ -1,0 +1,11 @@
+<main class="Orders--Main">
+  <h1 class="Orders--Title">Pending Orders</h1>
+  <div class="Orders--List">
+    <% Order.allPending.each do |order| %>
+    <%= render partial: "order-section", locals: {
+                 order: order,
+                 items: order.order_items,
+               } %>
+    <% end %>
+  </div>
+</main>
